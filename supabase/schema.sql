@@ -119,7 +119,7 @@ begin
   end if;
   return new;
 end;
-$$ language plpgsql;
+$$ language plpgsql set search_path = public;
 
 drop trigger if exists contacts_touch_estado on contacts;
 create trigger contacts_touch_estado before update on contacts
@@ -134,7 +134,7 @@ alter table events enable row level security;
 
 create or replace function es_admin() returns boolean as $$
   select exists (select 1 from profiles where id = auth.uid() and rol = 'admin');
-$$ language sql security definer stable;
+$$ language sql security definer stable set search_path = public;
 
 create policy "perfil propio o admin" on profiles for select using (id = auth.uid() or es_admin());
 create policy "ver contactos" on contacts for select using (asignado_a = auth.uid() or es_admin());
