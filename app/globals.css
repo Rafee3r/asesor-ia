@@ -88,3 +88,22 @@ label { font-size: 12px; color: var(--muted); display: block; margin: 8px 0 4px;
 .call small { display: block; color: var(--muted); }
 .call p { margin: 6px 0 0; font-size: 14px; }
 button:disabled { opacity: .5; cursor: default; }
+
+/* ---- Laboratorio ---- */
+.lab-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px; align-items: start; }
+@media (max-width: 900px) { .lab-grid { grid-template-columns: 1fr; } }
+.lab-col { display: flex; flex-direction: column; gap: 16px; min-width: 0; }
+.lab-editor { position: sticky; top: 12px; }
+.guion { min-height: 55vh; font-family: ui-monospace, Menlo, monospace; font-size: 13px; line-height: 1.5; margin: 10px 0; resize: vertical; }
+.lab-chat { max-height: 420px; min-height: 160px; margin-top: 12px; }
+.kpis4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+@media (max-width: 600px) { .kpis4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.evaluacion .kpi { cursor: default; }
+.lista { margin: 4px 0 0; padding-left: 18px; font-size: 14px; display: flex; flex-direction: column; gap: 4px; }
+.chips-line { display: flex; gap: 6px; flex-wrap: wrap; margin: 8px 0; }
+.tabla-wrap { overflow-x: auto; margin-top: 10px; }
+.tabla { width: 100%; border-collapse: collapse; font-size: 14px; }
+.tabla th, .tabla td { text-align: left; padding: 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.tabla th { color: var(--muted); font-weight: 500; font-size: 12px; }
+.tabla td:nth-child(4), .tabla td:nth-child(5) { font-variant-numeric: tabular-nums; white-space: nowrap; }
+code { font-size: 12px; background: var(--panel2); padding: 2px 5px; border-radius: 5px; }

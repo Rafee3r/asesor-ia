@@ -60,7 +60,10 @@ export default function Home() {
     <div className="wrap">
       <div className="top">
         <h1>Asesor IA <span className="muted">· {contactos.length} contactos</span></h1>
-        <button className="btn" onClick={salir}>Salir</button>
+        <div className="btns" style={{ marginTop: 0 }}>
+          <a className="btn gold" href="/lab">Laboratorio</a>
+          <button className="btn" onClick={salir}>Salir</button>
+        </div>
       </div>
 
       <div className="kpis">
