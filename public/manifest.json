@@ -1,0 +1,9 @@
+{
+  "name": "Asesor IA",
+  "short_name": "Asesor IA",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f1f2e",
+  "theme_color": "#0f1f2e",
+  "icons": []
+}
